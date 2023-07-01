@@ -40,7 +40,7 @@ function ButtonMode() {
     }
   }
 
-  return <button className="transition duration-500 hover:scale-125  m-20" onClick={clickear}>{logo}</button>;
+  return <button className="transition duration-500 hover:scale-125" onClick={clickear}>{logo}</button>;
 }
 
 export default ButtonMode;

@@ -6,6 +6,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
+    fontFamily: {
+      josefin: ['Belanosima', 'sans-serif'],
+    },
     colors:{},
     extend: { 
       backgroundImage: {
