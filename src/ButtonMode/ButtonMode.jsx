@@ -33,14 +33,14 @@ function ButtonMode() {
   function clickear() {
     if (tema === "light") {
       setTema("dark");
-      setLogo(moon);
+      setLogo(sun);
     } else {
       setTema("light");
-      setLogo(sun);
+      setLogo(moon);
     }
   }
 
-  return <button className="transition duration-500 hover:scale-125" onClick={clickear}>{logo}</button>;
+  return <button className="transition duration-500 hover:scale-125 scale-90" onClick={clickear}>{logo}</button>;
 }
 
 export default ButtonMode;
