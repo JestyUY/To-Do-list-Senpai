@@ -20,7 +20,7 @@ const moon = (
 );
 function ButtonMode() {
   const [tema, setTema] = useState("light");
-  const [logo, setLogo] = useState(sun);
+  const [logo, setLogo] = useState(moon);
 
   useEffect(() => {
     if (tema === "light") {
@@ -40,7 +40,7 @@ function ButtonMode() {
     }
   }
 
-  return <button className="transition duration-500 hover:scale-125 scale-90" onClick={clickear}>{logo}</button>;
+  return <button className="transition duration-500 hover:scale-125 scale-90 ease-in-out" onClick={clickear}>{logo}</button>;
 }
 
 export default ButtonMode;
