@@ -21,7 +21,7 @@ const moon = (
 function ButtonMode() {
   const [tema, setTema] = useState("light");
   const [logo, setLogo] = useState(moon);
-
+ 
   useEffect(() => {
     if (tema === "light") {
       document.body.classList.remove("dark");
