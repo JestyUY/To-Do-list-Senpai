@@ -1,8 +1,16 @@
-// import { useState } from "react"
-
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import CheckButton from "../checkButton/checkButton";
+const cross = (
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+    <path
+      fill="#494C6B"
+      fillRule="evenodd"
+      d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"
+    />
+  </svg>
+);
+
 const checkLogo = (
   <svg className="" xmlns="http://www.w3.org/2000/svg" width="11" height="9">
     <path
@@ -16,7 +24,6 @@ const checkLogo = (
 
 function Input() {
   const [initial, setInitial] = useState("");
-  // const [completed, setCompleted] = useState(false)
   const [inputArray, setInputArray] = useState([
     { key: 1, task: "Tomar agua", isCompleted: true },
     {
@@ -25,19 +32,10 @@ function Input() {
       isCompleted: false,
     },
   ]);
-  //   const [inputArrayRev, setInputArrayRev] = useState([
-  //     {
-  //       key: 2,
-  //       task: "Finalizar práctica de estados y props",
-  //       isCompleted: false,
-  //     },
-  //     { key: 1, task: "Tomar agua", isCompleted: true },
-  //   ]);
 
   function inputClick(ev) {
     if (ev.keyCode === 13) {
       ev.preventDefault();
-      // const lastValueOfId = inputArray[inputArray.length - 1].key + 1;
       const newValueOfArrays = [
         { key: uuidv4(), task: ev.target.value, isCompleted: false },
         ...inputArray,
@@ -107,22 +105,24 @@ function Input() {
             key={index}
             className={
               ob.isCompleted
-                ? "line-through text-gray-400 shrink-0"
-                : "no-underline text-black shrink-0"
+                ? "line-through text-gray-400 shrink-0 justify-between"
+                : "no-underline text-black shrink-0 justify-between"
             }
           >
-            <CheckButton
-              onClick={() => changingStatus(index)}
-              gradient={
-                ob.isCompleted
-                  ? "bg-gradient-to-br from-brightBlue to-pinkGrad"
-                  : ""
-              }
-              logo={ob.isCompleted ? checkLogo : ""}
-            />{" "}
-            <span className="my-auto mx-2">{ob.task}</span>
+            <div className="flex">
+              <CheckButton
+                onClick={() => changingStatus(index)}
+                gradient={
+                  ob.isCompleted
+                    ? "bg-gradient-to-br from-brightBlue to-pinkGrad"
+                    : ""
+                }
+                logo={ob.isCompleted ? checkLogo : ""}
+              />{" "}
+              <span className="my-auto mx-2">{ob.task}</span>
+            </div>
             <button
-              className=""
+              className="mr-4"
               onClick={() => {
                 const newArray = inputArray.filter(
                   (item) => item.key !== ob.key
@@ -134,7 +134,7 @@ function Input() {
               }}
             >
               {" "}
-              X
+              {cross}
             </button>
           </li>
         ))}
