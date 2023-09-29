@@ -140,7 +140,7 @@ function Input() {
         ))}
       </ul>
 
-      <div className="text-veryDarkGrayishBlue dark:text-LightGrayishBlueDM shadow-2xl  drop-shadow-2xl dark:bg-VeryDarkDesaturatedBlueDM  items-center   bg-veryLightGrayish w-full h-16  flex  [last-child]:rounded-b-xl border-t-[1px] border-lightGrayishBlue dark:border-VeryDarkGrayishBlueDM rounded-b-lg justify-evenly gap-4">
+      <div className="text-veryDarkGrayishBlue  dark:text-LightGrayishBlueDM shadow-2xl  drop-shadow-2xl dark:bg-VeryDarkDesaturatedBlueDM  items-center   bg-veryLightGrayish w-full h-16  flex  [last-child]:rounded-b-xl border-t-[1px] border-lightGrayishBlue dark:border-VeryDarkGrayishBlueDM rounded-b-lg justify-evenly gap-4">
         <span className="ml-2"> {`${taskLeft} left`}</span>
         <div className="md:flex h-full justify-between grow max-w-xs hidden">
           <button
