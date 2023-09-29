@@ -11,10 +11,10 @@ export default {
           },
     extend: {
       backgroundImage: {
-              'Mobile-Light': "url('./src/assets/bg-mobile-light.jpg')",
-              'Mobile-Dark': "url('./src/assets/bg-mobile-dark.jpg')",
-              'Desktop-Light': "url('./src/assets/bg-desktop-light.jpg')",
-              'Desktop-Dark': "url('./src/assets/bg-desktop-dark.jpg')"
+              'Mobile-Light': "url('./assets/bg-mobile-light.jpg')",
+              'Mobile-Dark': "url('./assets/bg-mobile-dark.jpg')",
+              'Desktop-Light': "url('./assets/bg-desktop-light.jpg')",
+              'Desktop-Dark': "url('./assets/bg-desktop-dark.jpg')"
             },
             colors: {
 
